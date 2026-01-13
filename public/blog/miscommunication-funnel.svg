@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Miscommunication Funnel</title>
+  <desc id="desc">A four-stage funnel showing intent, clarity, tone, and confirmation as filters.</desc>
+  <rect x="24" y="24" width="912" height="492" rx="32" fill="#f7f6f2" stroke="#e7e2d8" />
+  <text x="64" y="78" font-family="Georgia, serif" font-size="28" fill="#1f2933">
+    Miscommunication Funnel
+  </text>
+  <text x="64" y="110" font-family="Arial, sans-serif" font-size="14" fill="#52606d">
+    Meaning narrows as it passes through each filter.
+  </text>
+
+  <polygon points="130,140 830,140 790,220 170,220" fill="#cfeee6" stroke="#b7ddd3" />
+  <polygon points="170,220 790,220 750,300 210,300" fill="#ffe7b3" stroke="#f2d59a" />
+  <polygon points="210,300 750,300 710,380 250,380" fill="#ffd4cc" stroke="#f1bcb4" />
+  <polygon points="250,380 710,380 670,460 290,460" fill="#d8e6f3" stroke="#c4d6e8" />
+
+  <text x="480" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#1f2933">Intent</text>
+  <text x="480" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#1f2933">Clarity</text>
+  <text x="480" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#1f2933">Tone</text>
+  <text x="480" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#1f2933">Confirmation</text>
+</svg>

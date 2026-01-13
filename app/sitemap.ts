@@ -1,0 +1,36 @@
+import type { MetadataRoute } from "next";
+
+import { getAllPosts } from "@/lib/blog";
+import { siteConfig } from "@/lib/seo";
+import { templates } from "@/lib/templates";
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const now = new Date();
+  const routes = [
+    "",
+    "/pricing",
+    "/faq",
+    "/blog",
+    "/templates",
+    "/privacy",
+    "/terms",
+    "/app",
+  ];
+
+  const staticRoutes = routes.map((route) => ({
+    url: `${siteConfig.url}${route}`,
+    lastModified: now,
+  }));
+
+  const blogRoutes = getAllPosts().map((post) => ({
+    url: `${siteConfig.url}/blog/${post.slug}`,
+    lastModified: now,
+  }));
+
+  const templateRoutes = templates.map((template) => ({
+    url: `${siteConfig.url}/templates/${template.slug}`,
+    lastModified: now,
+  }));
+
+  return [...staticRoutes, ...blogRoutes, ...templateRoutes];
+}

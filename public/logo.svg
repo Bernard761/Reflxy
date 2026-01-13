@@ -1,0 +1,22 @@
+<svg width="420" height="120" viewBox="0 0 420 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ring" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0f5b6b"/>
+      <stop offset="100%" stop-color="#f3b9a6"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(60 60) rotate(90) scale(52)">
+      <stop offset="0%" stop-color="#0f5b6b" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#0f5b6b" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g>
+    <circle cx="60" cy="60" r="52" fill="url(#glow)"/>
+    <circle cx="60" cy="60" r="44" stroke="url(#ring)" stroke-opacity="0.45" stroke-width="5"/>
+    <circle cx="60" cy="60" r="30" stroke="url(#ring)" stroke-opacity="0.65" stroke-width="7"/>
+    <circle cx="60" cy="60" r="18" stroke="url(#ring)" stroke-opacity="0.85" stroke-width="9"/>
+    <circle cx="60" cy="60" r="4" fill="#0f5b6b"/>
+  </g>
+  <text x="130" y="72" font-size="44" font-weight="600" font-family="Space Grotesk, Arial, sans-serif" fill="#0f172a">
+    Reflxy
+  </text>
+</svg>

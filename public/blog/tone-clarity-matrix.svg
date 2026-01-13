@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Tone and Clarity Matrix</title>
+  <desc id="desc">A four-quadrant matrix mapping warmth and clarity with example phrases.</desc>
+  <rect x="24" y="24" width="912" height="492" rx="32" fill="#f7f6f2" stroke="#e7e2d8" />
+  <text x="64" y="78" font-family="Georgia, serif" font-size="28" fill="#1f2933">
+    Tone and Clarity Matrix
+  </text>
+  <text x="64" y="110" font-family="Arial, sans-serif" font-size="14" fill="#52606d">
+    How the same request feels based on warmth and precision.
+  </text>
+
+  <rect x="140" y="140" width="680" height="320" fill="#ffffff" stroke="#d8d0c5" />
+  <line x1="480" y1="140" x2="480" y2="460" stroke="#d8d0c5" />
+  <line x1="140" y1="300" x2="820" y2="300" stroke="#d8d0c5" />
+
+  <text x="480" y="500" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#52606d">
+    Clarity
+  </text>
+  <text x="100" y="320" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#52606d" transform="rotate(-90 100 320)">
+    Warmth
+  </text>
+
+  <text x="210" y="180" font-family="Arial, sans-serif" font-size="14" fill="#1f2933">Warm &amp; Unclear</text>
+  <text x="210" y="210" font-family="Arial, sans-serif" font-size="13" fill="#52606d">
+    When you can,
+  </text>
+  <text x="210" y="230" font-family="Arial, sans-serif" font-size="13" fill="#52606d">
+    please send it.
+  </text>
+
+  <text x="520" y="180" font-family="Arial, sans-serif" font-size="14" fill="#1f2933">Warm &amp; Clear</text>
+  <text x="520" y="210" font-family="Arial, sans-serif" font-size="13" fill="#52606d">
+    Thanks — please send
+  </text>
+  <text x="520" y="230" font-family="Arial, sans-serif" font-size="13" fill="#52606d">
+    by 4pm ET.
+  </text>
+
+  <text x="210" y="340" font-family="Arial, sans-serif" font-size="14" fill="#1f2933">Cold &amp; Unclear</text>
+  <text x="210" y="370" font-family="Arial, sans-serif" font-size="13" fill="#52606d">
+    Need this soon.
+  </text>
+
+  <text x="520" y="340" font-family="Arial, sans-serif" font-size="14" fill="#1f2933">Cold &amp; Clear</text>
+  <text x="520" y="370" font-family="Arial, sans-serif" font-size="13" fill="#52606d">
+    Send by 4pm ET.
+  </text>
+</svg>

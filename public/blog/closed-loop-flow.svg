@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Closed-Loop Communication Flow</title>
+  <desc id="desc">A four-step flow: sender message, receiver paraphrase, sender confirmation, decision logged.</desc>
+  <rect x="24" y="24" width="912" height="492" rx="32" fill="#f7f6f2" stroke="#e7e2d8" />
+  <text x="64" y="78" font-family="Georgia, serif" font-size="28" fill="#1f2933">
+    Closed-Loop Flow
+  </text>
+  <text x="64" y="110" font-family="Arial, sans-serif" font-size="14" fill="#52606d">
+    Confirm understanding before you move on.
+  </text>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#7b8794" />
+    </marker>
+  </defs>
+
+  <rect x="80" y="220" width="180" height="100" rx="18" fill="#cfeee6" stroke="#b7ddd3" />
+  <rect x="280" y="220" width="180" height="100" rx="18" fill="#ffe7b3" stroke="#f2d59a" />
+  <rect x="480" y="220" width="180" height="100" rx="18" fill="#ffd4cc" stroke="#f1bcb4" />
+  <rect x="680" y="220" width="180" height="100" rx="18" fill="#d8e6f3" stroke="#c4d6e8" />
+
+  <text x="170" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#1f2933">Sender</text>
+  <text x="170" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#1f2933">message</text>
+
+  <text x="370" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#1f2933">Receiver</text>
+  <text x="370" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#1f2933">paraphrase</text>
+
+  <text x="570" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#1f2933">Sender</text>
+  <text x="570" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#1f2933">confirmation</text>
+
+  <text x="770" y="260" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#1f2933">Decision</text>
+  <text x="770" y="280" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#1f2933">logged</text>
+
+  <line x1="260" y1="270" x2="280" y2="270" stroke="#7b8794" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="460" y1="270" x2="480" y2="270" stroke="#7b8794" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="660" y1="270" x2="680" y2="270" stroke="#7b8794" stroke-width="2" marker-end="url(#arrow)" />
+</svg>
