@@ -84,8 +84,7 @@ const run = async (request: Request) => {
       if (!token) {
         throw new Error("Unsubscribe token secret is missing.");
       }
-      const unsubscribeUrl = `${siteConfig.url}/unsubscribe?id=${lead.id}&token=${token}`;
-      const unsubscribeApiUrl = `${siteConfig.url}/api/unsubscribe?id=${lead.id}&token=${token}`;
+      const unsubscribeUrl = `${siteConfig.url}/api/unsubscribe?id=${lead.id}&token=${token}`;
       const email = buildWeeklyInsightsEmail({
         posts,
         weekStart,
@@ -97,7 +96,7 @@ const run = async (request: Request) => {
         text: email.text,
         html: email.html,
         headers: {
-          "List-Unsubscribe": `<${unsubscribeApiUrl}>`,
+          "List-Unsubscribe": `<${unsubscribeUrl}>`,
           "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
         },
       });
