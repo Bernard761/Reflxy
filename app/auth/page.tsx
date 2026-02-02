@@ -21,6 +21,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/auth",
   },
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 const errorCopy: Record<string, string> = {

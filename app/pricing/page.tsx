@@ -5,6 +5,7 @@ import MarketingLayout from "@/components/marketing/marketing-layout";
 import PricingTable from "@/components/marketing/pricing-table";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { siteConfig } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Pricing",
@@ -12,6 +13,21 @@ export const metadata: Metadata = {
     "Reflxy pricing for free and premium plans. Upgrade to unlock scenario mode and unlimited analyses.",
   alternates: {
     canonical: "/pricing",
+  },
+  openGraph: {
+    title: "Reflxy pricing",
+    description:
+      "Compare free and premium plans to unlock scenario mode and unlimited analyses.",
+    url: `${siteConfig.url}/pricing`,
+    images: [siteConfig.ogImage],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Reflxy pricing",
+    description:
+      "Compare free and premium plans to unlock scenario mode and unlimited analyses.",
+    images: [siteConfig.ogImage],
   },
 };
 

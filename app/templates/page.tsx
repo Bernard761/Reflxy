@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { templates } from "@/lib/templates";
+import { siteConfig } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Message templates",
@@ -13,6 +14,21 @@ export const metadata: Metadata = {
     "Scenario-based templates to help you understand emotional impact before sending.",
   alternates: {
     canonical: "/templates",
+  },
+  openGraph: {
+    title: "Reflxy message templates",
+    description:
+      "Scenario-based templates that surface emotional impact before you send.",
+    url: `${siteConfig.url}/templates`,
+    images: [siteConfig.ogImage],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Reflxy message templates",
+    description:
+      "Scenario-based templates that surface emotional impact before you send.",
+    images: [siteConfig.ogImage],
   },
 };
 

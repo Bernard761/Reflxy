@@ -40,6 +40,13 @@ export function generateMetadata({ params }: TemplatePageProps): Metadata {
       description: template.scenarioDescription,
       url: `${siteConfig.url}/templates/${template.slug}`,
       images: [siteConfig.ogImage],
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: template.title,
+      description: template.scenarioDescription,
+      images: [siteConfig.ogImage],
     },
   };
 }

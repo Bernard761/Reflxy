@@ -5,12 +5,26 @@ import MarketingLayout from "@/components/marketing/marketing-layout";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { siteConfig } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "FAQ",
   description: "Answers to the most common questions about Reflxy.",
   alternates: {
     canonical: "/faq",
+  },
+  openGraph: {
+    title: "Reflxy FAQ",
+    description: "Answers to the most common questions about Reflxy.",
+    url: `${siteConfig.url}/faq`,
+    images: [siteConfig.ogImage],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Reflxy FAQ",
+    description: "Answers to the most common questions about Reflxy.",
+    images: [siteConfig.ogImage],
   },
 };
 

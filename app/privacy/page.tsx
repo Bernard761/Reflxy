@@ -2,12 +2,26 @@ import type { Metadata } from "next";
 
 import MarketingLayout from "@/components/marketing/marketing-layout";
 import { Badge } from "@/components/ui/badge";
+import { siteConfig } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Privacy",
   description: "Reflxy privacy policy and data handling practices.",
   alternates: {
     canonical: "/privacy",
+  },
+  openGraph: {
+    title: "Reflxy privacy policy",
+    description: "Reflxy privacy policy and data handling practices.",
+    url: `${siteConfig.url}/privacy`,
+    images: [siteConfig.ogImage],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Reflxy privacy policy",
+    description: "Reflxy privacy policy and data handling practices.",
+    images: [siteConfig.ogImage],
   },
 };
 

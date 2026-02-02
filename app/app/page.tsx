@@ -18,6 +18,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/app",
   },
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default async function AppPage() {

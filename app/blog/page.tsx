@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { getAllPosts } from "@/lib/blog";
+import { siteConfig } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -13,6 +14,21 @@ export const metadata: Metadata = {
     "Reflxy journal: clarity, tone, and emotional impact in written communication.",
   alternates: {
     canonical: "/blog",
+  },
+  openGraph: {
+    title: "Reflxy journal",
+    description:
+      "Clarity, tone, and emotional impact in written communication from Reflxy.",
+    url: `${siteConfig.url}/blog`,
+    images: [siteConfig.ogImage],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Reflxy journal",
+    description:
+      "Clarity, tone, and emotional impact in written communication from Reflxy.",
+    images: [siteConfig.ogImage],
   },
 };
 

@@ -2,12 +2,26 @@ import type { Metadata } from "next";
 
 import MarketingLayout from "@/components/marketing/marketing-layout";
 import { Badge } from "@/components/ui/badge";
+import { siteConfig } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Terms",
   description: "Reflxy terms of service.",
   alternates: {
     canonical: "/terms",
+  },
+  openGraph: {
+    title: "Reflxy terms of service",
+    description: "Reflxy terms of service.",
+    url: `${siteConfig.url}/terms`,
+    images: [siteConfig.ogImage],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Reflxy terms of service",
+    description: "Reflxy terms of service.",
+    images: [siteConfig.ogImage],
   },
 };
 

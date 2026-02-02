@@ -13,6 +13,17 @@ type BlogPageProps = {
   params: { slug: string };
 };
 
+const toIsoDate = (value?: string) => {
+  if (!value) {
+    return null;
+  }
+  const timestamp = Date.parse(value);
+  if (Number.isNaN(timestamp)) {
+    return null;
+  }
+  return new Date(timestamp).toISOString();
+};
+
 export function generateStaticParams() {
   return getAllPosts().map((post) => ({ slug: post.slug }));
 }
@@ -20,6 +31,7 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: BlogPageProps): Metadata {
   try {
     const post = getPostBySlug(params.slug);
+    const publishedTime = toIsoDate(post.date);
     return {
       title: post.title,
       description: post.description,
@@ -30,6 +42,17 @@ export function generateMetadata({ params }: BlogPageProps): Metadata {
         title: post.title,
         description: post.description,
         url: `${siteConfig.url}/blog/${post.slug}`,
+        images: [siteConfig.ogImage],
+        type: "article",
+        ...(publishedTime ? { publishedTime } : {}),
+        ...(publishedTime ? { modifiedTime: publishedTime } : {}),
+        authors: [siteConfig.name],
+        tags: post.tags,
+      },
+      twitter: {
+        card: "summary_large_image",
+        title: post.title,
+        description: post.description,
         images: [siteConfig.ogImage],
       },
     };
@@ -56,8 +79,63 @@ export default async function BlogPostPage({ params }: BlogPageProps) {
     options: { parseFrontmatter: false },
   });
 
+  const publishedTime = toIsoDate(post.date);
+  const ogImageUrl = new URL(siteConfig.ogImage, siteConfig.url).toString();
+  const articleJsonLd = {
+    "@type": "Article",
+    headline: post.title,
+    description: post.description,
+    datePublished: publishedTime ?? undefined,
+    dateModified: publishedTime ?? undefined,
+    author: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: siteConfig.url,
+      logo: {
+        "@type": "ImageObject",
+        url: ogImageUrl,
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${siteConfig.url}/blog/${post.slug}`,
+    },
+    image: [ogImageUrl],
+    keywords: post.tags.join(", "),
+  };
+  const breadcrumbJsonLd = {
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Blog",
+        item: `${siteConfig.url}/blog`,
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: post.title,
+        item: `${siteConfig.url}/blog/${post.slug}`,
+      },
+    ],
+  };
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [articleJsonLd, breadcrumbJsonLd],
+  };
+
   return (
     <MarketingLayout>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="container py-16">
         <div className="space-y-4">
           <Link href="/blog" className="text-sm text-muted-foreground">

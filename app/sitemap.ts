@@ -6,6 +6,13 @@ import { templates } from "@/lib/templates";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
+  const resolveDate = (value: string) => {
+    const timestamp = Date.parse(value);
+    if (Number.isNaN(timestamp)) {
+      return null;
+    }
+    return new Date(timestamp);
+  };
   const routes = [
     "",
     "/pricing",
@@ -14,7 +21,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/templates",
     "/privacy",
     "/terms",
-    "/app",
   ];
 
   const staticRoutes = routes.map((route) => ({
@@ -24,7 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const blogRoutes = getAllPosts().map((post) => ({
     url: `${siteConfig.url}/blog/${post.slug}`,
-    lastModified: now,
+    lastModified: resolveDate(post.date) ?? now,
   }));
 
   const templateRoutes = templates.map((template) => ({

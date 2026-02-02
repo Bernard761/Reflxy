@@ -20,6 +20,7 @@ export const metadata: Metadata = {
       "Understand the emotional impact of messages before you send with a calm ripple visualization.",
     url: siteConfig.url,
     images: [siteConfig.ogImage],
+    type: "website",
   },
   twitter: {
     card: "summary_large_image",
