@@ -46,10 +46,10 @@ export default function SiteFooter() {
           <div className="surface-sunrise p-6">
             <div className="section-kicker">Stay in the loop</div>
             <h2 className="mt-3 font-display text-2xl font-semibold">
-              Calm communication insights, once a week.
+              Your weekly Reflxy reset.
             </h2>
             <p className="mt-2 text-sm text-muted-foreground">
-              Thoughtful updates, reflection prompts, and product drops. No spam.
+              A scenario to practice, a 60-second tone check, and product drops. No spam.
             </p>
             <form
               onSubmit={submitLead}
@@ -132,6 +132,14 @@ export default function SiteFooter() {
                     className="text-muted-foreground hover:text-foreground"
                   >
                     Privacy
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/blog"
+                    className="text-muted-foreground hover:text-foreground"
+                  >
+                    Blog
                   </Link>
                 </li>
                 <li>
